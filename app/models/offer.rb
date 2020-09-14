@@ -1,5 +1,6 @@
 class Offer < ApplicationRecord
   belongs_to :user
+  has_one_attached :photo
 
   validates :advertiser_name, presence: true, uniqueness: true
   validates :url, presence: true, format: { with: URI.regexp }
