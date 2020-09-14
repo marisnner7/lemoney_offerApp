@@ -23,6 +23,10 @@ gem 'redis', '~> 4.0'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'rails_admin', '~> 2.0'
 
+gem 'cloudinary', '~> 1.16.0'
+
+
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
