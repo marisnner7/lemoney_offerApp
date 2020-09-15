@@ -31,6 +31,7 @@ gem 'rails_admin', '~> 2.0'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'devise'
+gem 'faker'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
@@ -50,6 +51,9 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+end
+group :development, :test do
+  gem 'rspec-rails', '~> 4.0.1'
 end
 
 group :test do
