@@ -21,20 +21,12 @@
   padding:8px;
   text-decoration:none !important;
 }
-.card-distance-right  {
-  width:100%;
-  display:flex;
-  justify-content:flex-end;
-}
 
 .card-distance {
   background-color:$turquoise;
   display:flex;
   align-items:center;
   justify-content:center;
-  width:70px;
-  height: 70px;
-  font-size:15px;
   position:relative;
   bottom:10%;
 
