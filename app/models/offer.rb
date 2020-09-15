@@ -2,15 +2,15 @@ class Offer < ApplicationRecord
   belongs_to :user
 
   validates :advertiser_name, presence: true, uniqueness: true
-  validates :url, presence: true, format: { with: URI.regexp }
+  validates :url, presence: true, format: { with: URI::DEFAULT_PARSER.make_regexp }
   validates :description, presence: true, length: { maximum: 500 }
   validates :starts_at, presence: true
 
-  scope :enabled, -> do
+  scope :enabled, lambda {
     where(disable: false)
       .where('starts_at <= :time and (ends_at is null or ends_at >= :time)',
              time: Time.zone.now)
-  end
+  }
 
   scope :newest_first, -> { order 'id desc' }
   scope :order_by_premium, -> { order 'premium desc' }
@@ -20,8 +20,10 @@ class Offer < ApplicationRecord
 
   def enabled?
     return false if manually_disable?
+
     started = starts_at <= Time.zone.now
     return started if ends_at.blank?
+
     started && ends_at >= Time.zone.now
   end
 
