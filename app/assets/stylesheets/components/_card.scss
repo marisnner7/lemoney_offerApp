@@ -67,12 +67,20 @@
   .cards {
     grid-template-columns: 1fr;
   }
+  .card-category{
+    margin: 0;
+    padding: 0;
+  }
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
   .cards {
     grid-template-columns: 1fr;
+  }
+  .card-category{
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -88,6 +96,7 @@
   .cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
+
 }
 
 // Extra large devices (large desktops, 1200px and up)
