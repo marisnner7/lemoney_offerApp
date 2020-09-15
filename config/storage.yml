@@ -1,5 +1,5 @@
 cloudinary:
-  service: Cloudinary
+  service: local
   
 test:
   service: Disk
