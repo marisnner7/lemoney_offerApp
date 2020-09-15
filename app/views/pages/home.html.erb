@@ -1,2 +1,29 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container">
+  <div class="cards">
+    <% @offers.each do |offer| %>
+    <div class="card-category" >
+    <div class="card-distance-right">
+    <div class="card-distance">
+    <%= offer.advertiser_name %>
+    </div>
+    </div>
+
+    <div class="card-info">
+    <div class="card-info-box">
+    <i class="fas fa-calendar-day"></i> <%= offer.starts_at.strftime("%d-%m-%Y") %>
+    </div>
+
+    <div class="card-text">
+      <%= link_to offer.url %>
+    </div>
+    </div>
+    </div>
+
+    <% end %>
+  </div>
+</div>
+
+
+   
+
+
