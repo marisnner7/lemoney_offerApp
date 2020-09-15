@@ -1,0 +1,13 @@
+.offer-premium-badge {
+  background-color: theme-color-level('warning', -8);
+  border: 1px solid $red;
+  border-radius: 0.8rem;
+  box-shadow: 0 2px 6px theme-color-level('warning', -2);
+  font-size: 0.8rem;
+  right: 14rem;
+  line-height: 1.2rem;
+  padding: 0.2rem 1rem;
+  position: absolute;
+  text-shadow: 1px 1px 2px red;
+  top: -0.5rem;
+}
