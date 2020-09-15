@@ -5,12 +5,19 @@
     <div class="card-distance-right">
     <div class="card-distance">
     <%= offer.advertiser_name %>
+      <% if offer.premium %>
+         <span class="offer-premium-badge">
+          <%= Offer.human_attribute_name :premium %>!
+         </span>
+      <% end %>
     </div>
     </div>
 
     <div class="card-info">
     <div class="card-info-box">
     <i class="fas fa-calendar-day"></i> <%= offer.starts_at.strftime("%d-%m-%Y") %>
+    <i class="fas fa-calendar-day"></i> <%#= offer.ends_at.strftime("%d-%m-%Y") %>
+
     </div>
 
     <div class="card-text">
