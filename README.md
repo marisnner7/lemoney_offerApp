@@ -16,7 +16,7 @@ If you're not using RVM, check if you're using Ruby 2.6.6
 
     $ bundle install
     $ rails db:create
-    $ rails db:schema:load
+    $ rails db:migrate
     $ rails db:seed
     $ rails s
     
